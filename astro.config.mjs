@@ -1,7 +1,5 @@
 // @ts-check
-import cloudflare from "@astrojs/cloudflare";
 import starlight from "@astrojs/starlight";
-import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 // https://astro.build/config
@@ -11,16 +9,12 @@ export default defineConfig({
     starlight({
       title: "Guides Not Included",
       description:
-        "Community-built guides for Oxygen Not Included - builds, tips, and resources for managing your duplicant colony.",
+        "Oxygen Not Included builds, guides, and resources. (Keep calm and press the space bar.)",
       favicon: "/favicon.svg",
       lastUpdated: true,
       pagination: true,
+
+      customCss: ["./src/styles/global.css"],
     }),
   ],
-
-  vite: {
-    plugins: [tailwindcss()],
-  },
-
-  adapter: cloudflare(),
 });
