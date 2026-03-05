@@ -11,10 +11,14 @@ export default defineConfig({
       description:
         "Oxygen Not Included builds, guides, and resources. (Keep calm and press the space bar.)",
       favicon: "/favicon.svg",
+      logo: {
+        src: "./src/assets/opengraph.jpg",
+        replacesTitle: true,
+      },
       lastUpdated: true,
       pagination: true,
-
       customCss: ["./src/styles/global.css"],
+      credits: true,
     }),
   ],
 });
